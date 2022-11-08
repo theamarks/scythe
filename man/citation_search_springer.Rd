@@ -16,7 +16,7 @@ tibble of matching dataset and publication identifiers
 This function searches for citations from Springer. It requires that an API key
 be obtained from [Springer](https://dev.springernature.com/) and set using
 `scythe_set_key()`. Requests are throttled at one identifier every second
-so as to not overload the PLOS API.
+so as to not overload the Springer API.
 }
 \examples{
 \dontrun{
