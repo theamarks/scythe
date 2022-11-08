@@ -58,10 +58,10 @@ citation_search_scopus <- function(identifiers) {
   
   # extract relevant information from raw results
   for (i in 1:length(results)) {
-    
-    
     article_id <-
-      results[[i]][["search-results"]][["entry"]][["prism:doi"]]
+      if (is.null(results[[i]][["search-results"]][["entry"]][["prism:doi"]])) {
+        results[[i]][["search-results"]][["entry"]][["prism:url"]]
+      }
     article_title <-
       results[[i]][["search-results"]][["entry"]][["dc:title"]]
     
