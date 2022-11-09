@@ -61,6 +61,8 @@ citation_search_scopus <- function(identifiers) {
     article_id <-
       if (is.null(results[[i]][["search-results"]][["entry"]][["prism:doi"]])) {
         results[[i]][["search-results"]][["entry"]][["prism:url"]]
+      } else {
+        results[[i]][["search-results"]][["entry"]][["prism:doi"]]
       }
     article_title <-
       results[[i]][["search-results"]][["entry"]][["dc:title"]]
